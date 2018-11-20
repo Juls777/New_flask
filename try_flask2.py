@@ -18,7 +18,7 @@ print(response['response']['numFound'], "documents found.")
 
 # Print the name of each document.
 
-print("Printing 100 top documents:")
+print("Printing 10 top documents:")
 
 for i, document in enumerate(response['response']['docs']):
       print("  Document title ", i, "=", document['title'])
