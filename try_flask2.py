@@ -11,7 +11,14 @@ from flask import Flask, render_template, request, redirect, url_for
 #Initialize Flask instance
 app = Flask(__name__)
 
-example_data = urlopen('http://localhost:8983/solr/wiki/select?q=text:cheese&wt=python&start=0&rows=10')
+example_data = [
+    {"name": "Cat sleeping on a bed", "source": "cat.jpg"},
+    {"name": "Misty forest", "source": "forest.jpg"},
+    {"name": "Bonfire burning", "source": "fire.jpg"},
+    {"name": "Old library", "source": "library.jpg"},
+    {"name": "Sliced orange", "source": "orange.jpg"},
+    {"name": "query", "source": "http://localhost:8983/solr/wiki/select?q=text:title&wt=python&start=0&rows=10"}
+]
 response = eval(example_data.read())
 
 print(response['response']['numFound'], "documents found.")
