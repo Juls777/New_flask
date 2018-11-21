@@ -70,5 +70,5 @@ for i, document in enumerate(response['response']['docs']):
         matches.append(match)
    
 #Render index.html with matches variable.
-return render_template("solr.html", matches=matches)
+return render_template("solr.html", matches=matches) #change solr.html!!!
     
